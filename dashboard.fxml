@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="484.0" prefWidth="630.0" style="-fx-background-color: #38e4c5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashboardController">
+   <children>
+      <AnchorPane layoutX="313.0" layoutY="10.0" prefHeight="462.0" prefWidth="309.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
+         <children>
+            <Label layoutX="91.0" layoutY="33.0" prefHeight="43.0" prefWidth="120.0" text="DashBoard">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Button layoutX="117.0" layoutY="155.0" onAction="#handleNurseLogin" style="-fx-font-family: 'System Bold'; -fx-font-size: 12pt; -fx-background-color: #000000;" text="Nurse" textFill="#38e4c5" />
+            <Button layoutX="113.0" layoutY="112.0" onAction="#handleDoctorLogin" style="-fx-font-family: 'System Bold'; -fx-font-size: 12pt; -fx-background-color: #000000;" text="Doctor" textFill="#38e4c5" />
+            <Button layoutX="113.0" layoutY="200.0" onAction="#handlePatientLogin" style="-fx-font-family: 'System Bold'; -fx-font-size: 12pt; -fx-background-color: #000000;" text="Patient" textFill="#38e4c5" />
+            <Button layoutX="116.0" layoutY="243.0" onAction="#handleAdminLogin" style="-fx-font-family: 'System Bold'; -fx-font-size: 12pt; -fx-background-color: #000000;" text="Admin" textFill="#38e4c5" />
+            <Button layoutX="59.0" layoutY="286.0" onAction="#handleMakeAppointment" style="-fx-font-family: 'System Bold'; -fx-font-size: 12pt; -fx-background-color: #000000;" text="Make an Appointment" textFill="#38e4c5" />
+            <Label layoutX="90.0" layoutY="72.0" prefHeight="32.0" prefWidth="120.0" text="Login Page" textFill="#38e4c5">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="136.0" layoutY="216.0" />
+      <Label layoutX="122.0" layoutY="216.0" />
+      <Label layoutX="47.0" layoutY="209.0" style="-fx-font-family: 'System Bold'; -fx-font-size: 21pt;" />
+      <FontAwesomeIcon glyphName="STAR" layoutX="92.0" layoutY="257.0" size="5em" />
+      <FontAwesomeIcon glyphName="STAR" layoutX="160.0" layoutY="258.0" size="5em" />
+      <FontAwesomeIcon glyphName="STAR" layoutX="127.0" layoutY="208.0" size="5em" text="" />
+      <Label layoutX="26.0" layoutY="234.0" prefHeight="49.0" prefWidth="271.0" style="-fx-font-family: 'System Bold'; -fx-font-size: 21pt;" />
+      <Label layoutX="101.0" layoutY="78.0" prefHeight="31.0" prefWidth="102.0" text="AL-SHIFA">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon glyphName="PLUS" layoutX="70.0" layoutY="105.0" size="2.5em" wrappingWidth="29.0" />
+      <Label layoutX="34.0" layoutY="109.0" prefHeight="35.0" prefWidth="227.0" text="International Hospital">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

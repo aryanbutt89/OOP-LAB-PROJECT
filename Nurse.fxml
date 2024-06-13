@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane fx:controller="application.NurseController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <TableView fx:id="appointmentTable" GridPane.columnSpan="4" GridPane.rowIndex="0">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name"/>
+            <TableColumn fx:id="phoneColumn" text="Phone"/>
+            <TableColumn fx:id="diseaseColumn" text="Disease"/>
+            <TableColumn fx:id="timeColumn" text="Time"/>
+            <TableColumn fx:id="doctorColumn" text="Doctor"/>
+            <TableColumn fx:id="genderColumn" text="Gender"/>
+            <TableColumn fx:id="priceColumn" text="Price"/>
+            <TableColumn fx:id="wardColumn" text="Ward"/>
+        </columns>
+    </TableView>
+
+    <Label text="Search:" GridPane.rowIndex="1" />
+    <TextField fx:id="searchField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Button text="Search" onAction="#handleSearchAppointments" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+    <Label text="Name:" GridPane.rowIndex="2" />
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="2" visible="false" />
+
+    <Label text="Phone:" GridPane.rowIndex="3" />
+    <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="3" visible="false" />
+
+    <Label text="Disease:" GridPane.rowIndex="4" />
+    <TextField fx:id="diseaseField" GridPane.columnIndex="1" GridPane.rowIndex="4" visible="false" />
+
+    <Label text="Time:" GridPane.rowIndex="5" />
+    <TextField fx:id="timeField" GridPane.columnIndex="1" GridPane.rowIndex="5" visible="false" />
+
+    <Label text="Doctor:" GridPane.rowIndex="6" />
+    <ComboBox fx:id="doctorComboBox" GridPane.columnIndex="1" GridPane.rowIndex="6" visible="false" />
+
+    <Label text="Gender:" GridPane.rowIndex="7" />
+    <TextField fx:id="genderField" GridPane.columnIndex="1" GridPane.rowIndex="7" visible="false" />
+
+    <Label text="Price:" GridPane.rowIndex="8" />
+    <TextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <Label text="Ward:" GridPane.rowIndex="9" />
+    <TextField fx:id="wardField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+    <HBox spacing="10" alignment="center" GridPane.columnSpan="3" GridPane.rowIndex="10">
+        <Button text="Create Appointment" onAction="#handleCreateAppointmentButtonAction" />
+        <Button text="Update Appointment" onAction="#handleUpdateAppointment" />
+        <Button text="Delete Appointment" onAction="#handleDeleteAppointment" />
+        <Button text="Logout" onAction="#handleLogout" />
+    </HBox>
+
+   <Button text="Save Appointment" onAction="#handleCreateAppointment" GridPane.columnSpan="2" GridPane.rowIndex="11" visible="false" fx:id="createAppointmentButton"/>
+
+<Label text="Ward:" GridPane.rowIndex="9" />
+<TextField fx:id="wardField" GridPane.columnIndex="1" GridPane.rowIndex="9" visible="true" />
+</GridPane>

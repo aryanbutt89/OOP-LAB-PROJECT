@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="622.0" prefWidth="631.0" spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+
+    
+    <AnchorPane prefHeight="293.0" prefWidth="631.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
+      <children>
+         <Label alignment="CENTER" layoutX="200.0" layoutY="67.0" prefHeight="32.0" prefWidth="199.0" text="Admin Dashboard" textFill="#38e4c5">
+            <font>
+               <Font name="System Bold" size="22.0" />
+            </font>
+         </Label>
+         <Button fx:id="viewReportsButton" layoutX="261.0" layoutY="207.0" onAction="#handleViewReports" text="View Reports" />
+         <Button fx:id="manageStaffButton" layoutX="257.0" layoutY="142.0" onAction="#handleManageStaff" text="Manage Staff" />
+         <Button fx:id="managePatientsButton" alignment="CENTER" layoutX="246.0" layoutY="109.0" onAction="#handleManagePatients" text="Manage Patients" />
+         <Button fx:id="deleteButton" layoutX="257.0" layoutY="175.0" onAction="#handleDeletePatient" text="Delete Patient" />
+         <Button fx:id="logoutButton" layoutX="278.0" layoutY="244.0" onAction="#handleLogout" text="Logout" />
+      </children>
+   </AnchorPane>
+
+    <!-- New VBox for managing patients, initially hidden -->
+    <VBox fx:id="managePatientsPane" spacing="10" visible="false">
+        <!-- Table to display appointments -->
+        <TableView fx:id="appointmentsTable">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name" />
+                <TableColumn fx:id="phoneColumn" text="Phone" />
+                <TableColumn fx:id="diseaseColumn" text="Disease" />
+                <TableColumn fx:id="timeColumn" text="Time" />
+                <TableColumn fx:id="doctorColumn" text="Doctor" />
+                <TableColumn fx:id="genderColumn" text="Gender" />
+                <TableColumn fx:id="priceColumn" text="Price" />
+                <TableColumn fx:id="wardColumn" text="Ward" />
+            </columns>
+        </TableView>
+        
+        <!-- Section for assigning ward to patients -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label text="Assign Ward" />
+            <ComboBox fx:id="wardComboBox" />
+            <Button fx:id="assignWardButtonForPatients" onAction="#handleAssignWardForPatients" text="Assign Ward" />
+        </HBox>
+    </VBox>
+    
+    <!-- HBox for entering patient's name, initially hidden -->
+    <HBox fx:id="nameInputPane" alignment="CENTER" spacing="10" visible="false">
+        <Label text="Enter Patient's Name" />
+        <TextField fx:id="nameTextField" />
+    </HBox>
+
+    <!-- VBox for managing staff, initially hidden -->
+    <VBox fx:id="manageStaffPane" spacing="10" visible="false">
+        <!-- Table to display doctors -->
+        <TableView fx:id="doctorsTable">
+            <columns>
+                <TableColumn fx:id="doctorNameColumn" text="Name" />
+            </columns>
+        </TableView>
+        <Button fx:id="deleteDoctorButton" onAction="#handleDeleteDoctor" text="Delete Doctor" />
+    </VBox>
+</VBox>

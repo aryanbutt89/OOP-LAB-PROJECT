@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="application.DoctorController">
+    <TableView fx:id="appointmentsTable">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" />
+            <TableColumn fx:id="phoneColumn" text="Phone" />
+            <TableColumn fx:id="diseaseColumn" text="Disease" />
+            <TableColumn fx:id="timeColumn" text="Time" />
+            <TableColumn fx:id="doctorColumn" text="Doctor" />
+            <TableColumn fx:id="genderColumn" text="Gender" />
+        </columns>
+    </TableView>
+    <Button text="Delete Appointment" onAction="#handleDeleteAppointment" />
+    <Button text="Logout" onAction="#handleLogout" />
+</VBox>

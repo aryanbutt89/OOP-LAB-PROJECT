@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WardAssignmentController">
+    <TableView fx:id="appointmentsTable">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name"/>
+            <TableColumn fx:id="phoneColumn" text="Phone"/>
+            <TableColumn fx:id="diseaseColumn" text="Disease"/>
+            <TableColumn fx:id="timeColumn" text="Time"/>
+            <TableColumn fx:id="doctorColumn" text="Doctor"/>
+            <TableColumn fx:id="genderColumn" text="Gender"/>
+            <TableColumn fx:id="priceColumn" text="Price"/>
+            <TableColumn fx:id="wardColumn" text="Ward"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Assign Ward"/>
+        <ComboBox fx:id="wardComboBox"/>
+        <Button fx:id="assignWardButton" text="Assign Ward" onAction="#handleAssignWard"/>
+    </HBox>
+</VBox>

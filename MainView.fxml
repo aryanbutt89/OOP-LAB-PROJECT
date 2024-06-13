@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="484.0" prefWidth="376.0" style="-fx-background-color: #38e4c5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainViewController">
+    <children>
+        <VBox layoutX="78.0" layoutY="22.0" spacing="10">
+            <Label style="-fx-text-fill: #000000; -fx-font-size: 24px;" text="Product Management">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+            <TextField fx:id="nameInput" promptText="Name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="priceInput" promptText="Price" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="descriptionInput" promptText="Description" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" />
+        </VBox>
+      <FontAwesomeIcon glyphName="ENVELOPE" layoutX="59.0" layoutY="159.0" size="1.1em" />
+         <Button layoutX="142.0" layoutY="256.0" onAction="#handleDeleteAllProducts" style="-fx-background-color: #a42626; -fx-text-fill: #ffffff;" text="Delete All Products" />
+         <Button layoutX="147.0" layoutY="224.0" onAction="#handleDisplayProducts" style="-fx-background-color: #000000; -fx-text-fill: #ffffff;" text="Display Products" />
+         <Button layoutX="157.0" layoutY="192.0" onAction="#handleAddProduct" style="-fx-background-color: #000000; -fx-text-fill: #ffffff;" text="Add Product" />
+      <FontAwesomeIcon glyphName="STAR" layoutX="58.0" layoutY="126.0" size="1.4em" />
+      <FontAwesomeIcon glyphName="USER" layoutX="60.0" layoutY="88.0" size="1.3em" wrappingWidth="13.199999809265137" />
+    </children>
+</AnchorPane>
